@@ -1,0 +1,138 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+<!-- 		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/exif-js" type="text/javascript" ></script>
+	</head>
+	<body data-name="1">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="mypage">
+				<div class="wrap">
+					<h2><img src="images/ico_user.png">마이페이지</h2>
+					<div class="top section">
+						<div class="box">
+							<div class="profileImg">
+								<span class='img'><img src="images/profile_default.jpg" alt=""></span>
+								<label class="input-file-button" for="input-file"></label>
+								<input type="file" id="input-file" id="input-file" style="display:none;" />
+							</div>
+							<ul class="info">
+								<li class='member_type'><span>레벨</span></li>
+								<li class='reg_date'><span>가입일</span></li>
+								<li class="nickName nickarea"><span>닉네임</span><!-- 
+	 --><input name="uname" value="" type="text" readonly /></li>
+							</ul>
+							<button class="myDetail" onclick="location.href='mypage_detail.html'">개인정보 업데이트</button>
+							<p class="txt1">*추가로 입력 하고 레벨 1단계 업그레이드 해보세요.</p>
+						</div>
+						
+						<ul class="salt">
+							
+							<li class="current"><span>현재 솔트</span><b>0</b></li>
+							<li class='account'><span>누적 솔트</span><b>0</b></li>
+						</ul>
+						<ul class="withdraw">
+							<li class="withdraw"><span>탈퇴</span><button class="unlink">탈퇴하기</button></li>
+						</ul>
+					</div>
+					<div class="salt_detail detail">
+						<p>솔트 적립/소진 내역<a href="mypage_salt.html" class="more">더 보기</a></p>
+						<table>
+							<colgroup>
+								<col width="30%">
+								<col width="20%">
+								<col width="30%">
+								<col width="20%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="date">날짜</th>
+									<th class="acc">적립</th>
+									<th class="type">구분</th>
+									<th class="salt">솔트</th>
+								</tr>
+							</thead>
+							<tbody>
+<!-- 								<tr> -->
+<!-- 									<td class="date">2022.09.20</td> -->
+<!-- 									<td class="acc">적립</td> -->
+<!-- 									<td class="type">숫자력</td> -->
+<!-- 									<td class="salt">80</td> -->
+<!-- 								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="win_detail detail">
+						<p>경품 당첨 내역<a href="mypage_gift.html" class="more">더 보기</a></p>
+						<table>
+							<colgroup>
+								<col width="30%">
+								<col width="35%">
+								<col width="35%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="date">날짜</th>
+									<th class="type">구분</th>
+									<th class="gift">경품</th>
+								</tr>
+							</thead>
+							<tbody>
+<!-- 								<tr> -->
+<!-- 									<td class="date">2022.09.20</td> -->
+<!-- 									<td class="type">룰렛</td> -->
+<!-- 									<td class="gift">기프티콘</td> -->
+<!-- 								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="level_detail detail">
+						<p>레벨 업그레이드 내역 </p>
+						<table>
+							<colgroup>
+								<col width="30%">
+								<col width="70%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="date">날짜</th>
+									<th class="type">구분</th>
+								</tr>
+							</thead>
+							<tbody>
+<!-- 								<tr> -->
+<!-- 									<td class="date">2022.09.20</td> -->
+<!-- 									<td class="acc">적립</td> -->
+<!-- 									<td class="type">숫자력</td> -->
+<!-- 									<td class="salt">80</td> -->
+<!-- 								</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+		<div class="dimmed" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; opacity: 0.5; background-color: rgb(0, 0, 0); display:none;">
+			<div style="margin: 0;position: absolute;top: 50%;left: 23%; font-size:20px; font-weight:bold; color:white;">화면을 업데이트 중입니다.</div>
+		</div>
+	</body>
+</html>

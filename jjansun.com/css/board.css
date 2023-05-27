@@ -1,0 +1,431 @@
+﻿@charset "utf-8";
+
+
+.boardTxt{
+    text-align:center;
+    color:#2b76e7;
+    font-weight:bold;
+    margin-bottom:80px;
+    font-size:30px;
+}
+.listBox{
+    float: left; 
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.noticeList{
+    overflow: hidden;
+    width:100%;
+}
+.listBox a{
+    padding:0px 40px;
+    display:block;
+}
+.title{
+    font-size:13px;
+    font-weight:400;
+}
+.title span{
+    position: absolute;
+    top:0px; left:0px;
+    font-weight:normal;
+    color:#a9a9a9;
+    display:block;
+}
+.replyNum{
+    background: url(../images/board/replyIcon.png) no-repeat;
+    width: 25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2b76e7;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0px; right:0px;
+}
+.info{
+    float:left;
+    margin:2px 0 0 0px;
+}
+.listBox.notice .info{
+    margin:15px 0 0 0;
+}
+.info li{
+    float:left;
+    color:#b9b9b9;
+    font-size: 12px;
+}
+.info li.view em, .info li span{
+    color:#a9a9a9;
+}
+.info li span{
+    display:inline-block;
+    margin:0 5px;
+}
+
+.board_view_wrap{
+    margin:20px auto 20px auto;
+}
+.board_view_wrap .viewtitle{
+   position: relative;
+}
+.board_view_wrap .viewtitle .info{
+    float:none;
+    overflow:hidden;
+    margin-left:0;
+}
+.viewtitle{
+    padding:0px 40px;
+    display:block;
+    border-bottom:1px solid #bfbfbf;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+.board_view_wrap .contents{
+    border-bottom: 1px solid #707070;
+    padding-bottom:20px;
+    font-size:12px;
+}
+.board_view_wrap .contents img{
+    display:block;
+    margin:10px 0px;
+}
+.index_list .prev, .index_list .next{
+    border-bottom:1px solid #d8d8d8;
+}
+.index_list .prev a, .index_list .next a{
+    background: url(../images/board/bu_arrow_t.png) no-repeat;
+    font-size: 12px;
+    padding: 10px 0;
+    padding-left: 40px;
+    background-position: 3% 50%;
+    background-size: 10px;
+}
+.index_list .next a{
+    background:url(../images/board/bu_arrow_d.png) no-repeat;
+    background-position: 3% 50%;
+    background-size: 10px;
+}
+.board_view_wrap .btn_area {
+    font-size: 0;
+    margin-top: 20px;
+}
+.board_view_wrap .btn_boardList {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+}
+.board_write_wrap .write_box{
+    width:100%;
+    
+}
+.board_write_wrap .view_area .write_box{
+    margin-bottom: 30px;
+}
+.board_write_wrap .write_box textarea{
+    float:left;
+    width: 100%;
+    height: 100px;
+    border-radius:7px;
+    border:2px solid #2b76e7;
+    box-sizing:border-box;
+    padding:10px;
+    overflow-y:auto;
+    color: #000;
+    font-size:13px;
+    margin-bottom:5px;
+}
+.board_write_wrap .write_box button{
+    width:100%;
+}
+.board_write_wrap .write_box button img{
+    width:100%;
+}
+.board_write_wrap .write_box  .btn_comment{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background: #2b76e7
+}
+.boarddetail .btn_more{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background: #3a8143;
+}
+.board_write_wrap{
+    float:left;
+    width:100%;
+}
+.eventPage .board_write_wrap{
+    margin-top:300px;
+}
+.view_area{
+    font-size:12px;
+    margin-top:20px;
+    width:100%;
+}
+
+.view_area .content{
+    position: relative;
+    border-bottom:1px solid #c9c9c9;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+.view_area .view_area_info{
+    padding-left:50px;
+    padding-right:110px;
+    position: relative;
+}
+.view_area .view_reply .view_area_info{
+    padding-left:20px;
+    padding-right:110px;
+    position: relative;
+}
+.view_area .content .img{
+    display:block;
+    position: absolute;
+    width:38px; height:38px;
+    top:0px; left:0px;
+    border: 1px solid #969696;
+    border-radius: 19px;
+    overflow: hidden;
+}
+.view_area .content .img img{
+    width:100%;
+    height:100%;
+}
+.view_area .content .place{
+    color:#2b76e7;
+    font-weight:bold;
+}
+.view_area .content .user{
+    color:#000;
+    display:inline-block;
+    margin-left:5px;
+}
+.editBtnList{
+    display:block;
+    position: absolute;
+    top:0px; right:0px;
+}
+.editBtnList a{
+    display: inline-block;
+    float: left;
+    color: #aaaaaa;
+    padding: 0 6px;
+    position: relative;
+}
+.editBtnList a+a::before{
+    content:
+    "";
+    width: 1px;
+    height: 10px;
+    background:#aaaaaa;
+    display:
+    inline-block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.editBtnList a span{
+    display:inline-block;
+    color:#acacac;
+    font-size:16px;
+    margin:0 5px;
+}
+.view_area .content .txt{
+    word-break: break-all;
+    margin-top:5px;
+    padding-left:56px;
+}
+.view_area .content .iconList{
+    margin-top:5px;
+    overflow: hidden;
+}
+.view_area .content .iconList .number{
+    float:left;
+    margin-top:4px;
+}
+.view_area .content .iconList .number span{
+    color:#2b76e7;
+    margin-left: 2px;
+}
+.view_area .content .reply, 
+.view_area .content .like{
+    float:left;
+}
+.view_area .content .reply a, 
+.view_area .content .like a{
+    width:20px;
+    display:inline-block;
+    float:left;
+    margin-top: 1px;
+}
+.view_area .content .like a{
+    margin-left:10px;
+    margin-top: 3px;
+}
+.view_area .content .reply a img, 
+.view_area .content .like a img{
+    width:15px;
+    display:inline-block;
+    vertical-align:middle;
+}
+.iconList .date{
+    margin:2px;
+    float: right;
+    color: #aaaaaa;
+}
+.content.view_reply{
+    background: #e5edf9;
+    border-radius: 7px;
+    padding: 10px;
+/*    float: left;*/
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+}
+.content.view_reply .editBtnList a{
+    color:#2b76e7;
+}
+.content.view_reply .editBtnList a+a::before{
+   content:"";
+   background:#2b76e7;
+}
+.content.view_reply .ico{
+    width:12px;
+    position: absolute;
+    top:0px; left:0px;
+}
+.content.view_reply .btn_comment_re{
+    float:left;
+    color:#acacac;
+}
+.content.view_reply .txt{
+    color:#727272;
+    padding-left: 26px;
+}
+.btn_area.page_more, .write_reply{
+    margin-top: 10px;
+    width:100%;
+}
+.board_write_wrap .write_reply textarea {
+   float: left;
+    width: 100%;
+    height: 100px;
+    border-radius: 7px;
+    border: 2px solid #2b76e7;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: auto;
+    color: #000;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.btn_area.rere{
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.btn_area button{
+    width: 140px;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #2b76e7;
+}
+.btn_area button.btn_reply_del{
+    background: #2b76e7;
+}
+.btn_area button.btn_reply_mod{
+    margin-left:5px;
+}
+.btn_area.page_more .btn_more {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    margin: 25px 0;
+    background: url(../images/board/bu_arrow_d.png) no-repeat center bottom;
+    font-size: 20px;
+    text-align:center;
+    color: #636363;
+}
+
+.eventPage, .commingEventList, .list, .list dl, .list dd{
+    float:left;
+    width:100%;
+}
+.ingEventTitle, .commingEventTitle{
+    background:url(../images/board/measuretBg.png) no-repeat;
+    width:158px;
+    height:67px;
+    line-height:47px;
+    padding-left:24px;
+    color:#fff;
+    font-weight:bold;
+    font-size:20px;
+    float:left;
+}
+.list dl dt{
+    font-size:20px;
+    font-weight:200;
+    margin-bottom:15px;
+    float:left;
+}
+.eventPage{
+    margin:180px auto 50px 0;
+     float: none;
+     overflow:hidden;
+ }
+.commingEventList{
+    margin-top:70px;
+}
+
+.event_board{
+    border-top: 1px solid #bfbfbf;
+    overflow: hidden;
+    float:left;
+    width:100%;
+    margin-top:50px;
+}
+.event_board .listBox{
+    border-bottom:1px solid #bfbfbf;
+    padding-bottom:18px;
+    border-top:none;
+}
+.event_board .listBox:last-child{
+}
+
+.download{
+    border-bottom: 1px solid #707070;
+    padding:10px 0 ;
+}
+.download dt{
+    font-size:12px;
+}
+.download dt a{
+    margin-left:3px;
+    display: inline-block;
+}

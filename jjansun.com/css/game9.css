@@ -1,0 +1,47 @@
+﻿@charset "utf-8";
+
+/* 메모리게임 */
+#game .state{width: 84%;top: 5%;left: 8%;}
+#game .state #level .txt{color:#fff;font-size: 32px;font-weight: 600;}
+#game .state #level{margin-bottom: 5px;}
+
+#game .state #score{float:left;font-size: 20px;color:#fff;}
+#game .state #score em{margin-left:7px; font-weight: 700; font-size:24px; vertical-align: -1px;}
+
+#game #life{float:right; text-align:right; margin-top: 4px;}
+#game #life span{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game9/game_life.png);width: 30px;height: 30px;display: inline-block;background-size: contain; background-repeat: no-repeat;}
+#game #life span.empty{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game9/game_life2.png);}
+
+#wrap #game #txt{top: 43.5%;left:0%;width:100%;height:9%;z-index: 999;display:none;}
+#wrap #game #txt span{background-size: contain;background-position: center;background-repeat: no-repeat;position: absolute;width: 80%;height:100%;top:0%;left: 10%;}
+#wrap #game #txt span.win{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game9/game_win.png'); }
+#wrap #game #txt span.again{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game9/game_again.png'); }
+#wrap #game #txt span.complete{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game9/game_complete.png'); }
+
+
+#game .boxContainer{width: 85%;height: 63.3%;top: 22%;left: 7.5%;}
+#game .boxContainer .box{width: 22%;height: 19.5%;margin: 0.1% 0.8%;font-weight: 800;background-color:#fff;overflow:hidden;cursor:pointer;display: inline-block;}
+#game .boxContainer .box span{display:none;}
+#game .boxContainer .box.on{background-color: #73abff;}
+#game .boxContainer .box.on span{ display: flex; height: 100%; align-items: center; justify-content: center; font-size: 22px; color:#fff;}
+
+#game .notice{display:none;top: 75%;font-size: 17px;left: calc(50% - 119px);font-weight: 600;color: #000;-webkit-animation: blink 0.5s ease-in-out infinite alternate;-moz-animation: blink 0.5s ease-in-out infinite alternate;animation: blink 0.5s ease-in-out infinite alternate;}
+
+@-webkit-keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @-moz-keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+#game #character{position: absolute; bottom:0px; left:0px; width:100%; height:12%; background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/user_default.png'); background-repeat: no-repeat; background-size: contain; background-position: center;}
+#game #character.win{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/user_win.png'); }
+

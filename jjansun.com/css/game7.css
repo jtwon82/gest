@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+
+/* 손타자 */
+#intro .content .icon{width:50px;}
+
+#game #score{font-size: 18px;color:#000;font-weight: 600;bottom: 18.3%;left: 2.5%;width: 22%;text-align: left;z-index: 10;}
+#game #score em{font-size: 28px;margin-left: 4px;color: #0166ee;vertical-align: -3px;}
+
+#game #timer{font-size: 19px;color:#000;font-weight: 600;bottom: 17%;right: 5%;width: 46px;text-align: right;z-index: 10;height: 46px;line-height: 42px;text-align: center;background-color: #fff;border-radius: 50%;border: 3px solid #0166ee;}
+#game #timer em{font-size: 23px;color:#000;display: inline-block;vertical-align: -3px;}
+
+#game #input{width: 48%;height: 6%;bottom: 18%;left: 28%;z-index: 10;}
+#game #input input{padding: 15px;font-size: 17px;text-align:center;width:100%;height:100%;top:0px;left:0px;border: 2px solid #727272;}
+#game #input input::placeholder{color:rgb(189, 189, 189);}
+#game #area{width:100%;height: 45%;top: 28%;left:0%;overflow: hidden;}
+#game #area .quiz{display: none;font-size: 16px;padding: 15px 14px;color:#000;background-image:url(https://dbins2.speedgabia.com/jjansun/images/game7/game_input.png);word-break: keep-all;right:-55%;background-size: cover;background-repeat: no-repeat;background-position: center;width: 70px;}
+#game #area .quiz.active{font-weight: bold;}
+#game #area .rnd0{top:40%;}
+#game #area .rnd1{top:47%;}
+#game #area .rnd2{top:50%;}
+#game #area .rnd3{top:60%;}
+#game #area .rnd4{top:70%;}

@@ -1,0 +1,77 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+		<link href="css/board.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+<!-- 		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+	</head>
+	<body data-name="6">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="cs board">
+				<div class="wrap">
+					<h2><a href="cs_faq.html">고객센터</a><span>무엇을 도와 드릴까요?</span></h2>
+					<div class="tabContainer">
+						<div class="tabHead">
+							<ul>
+								<li class=""><a href="cs_faq.html">FAQ</a></li>
+								<li class="active"><a href="cs_board_list.html">게시판</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="board detail">
+						<div class="noticeList">
+
+<!-- 							<div class="listBox"> -->
+<!-- 								<a href="#"> -->
+<!-- 								<p class="title"> -->
+<!-- 									<span>10</span> [응원 영상] 박문성 썸머 응원 / 리버플 -->
+<!-- 								</p> -->
+<!-- 								<p class="replyNum"> -->
+<!-- 									26 -->
+<!-- 								</p> -->
+<!-- 								<ul class="info"> -->
+<!-- 									<li class="name"> -->
+<!-- 										관리자<span>ㅣ</span> -->
+<!-- 									</li> -->
+<!-- 									<li class="view"> -->
+<!-- 										view <em>23</em><span>ㅣ</span> -->
+<!-- 									</li> -->
+<!-- 									<li class="date"> -->
+<!-- 										21-07-23 -->
+<!-- 									</li> -->
+<!-- 								</ul> </a> -->
+<!-- 							</div> -->
+						</div>
+						<ul class="numbering">
+<!-- 							<li><a href="javascript:;"><span class="hidden">&lt;</span></a></li> -->
+<!-- 							<li><a href="javascript:;" class="current">1</a></li> -->
+<!-- 							<li><a href="javascript:;">2</a></li> -->
+<!-- 							<li><a href="javascript:;">3</a></li> -->
+<!-- 							<li><a href="javascript:;">4</a></li> -->
+<!-- 							<li><a href="javascript:;">5</a></li> -->
+<!-- 							<li><a href="javascript:;"><span class="hidden">&gt;</span></a></li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>

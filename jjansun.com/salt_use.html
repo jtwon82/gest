@@ -1,0 +1,41 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+	</head>
+	<body data-name="3">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="use">
+				<div class="wrap">
+					<h2><img src="https://dbins2.speedgabia.com/jjansun/images/ico_gift.png">즉석 당첨<span>솔트를 사용해서 즉석 경품 당첨 기회를 얻으세요.</span></h2>
+					<div class="game">
+						<ul>
+							<li class='use1' style="background-image: url('https://dbins2.speedgabia.com/jjansun/images/use_thumb1.jpg');"><a href="use1.html" onclick="gtag('event', '즉석당첨_스크래치복권');"><span>스크래치 복권</span></a></li>
+							<li class='use2' style="background-image: url('https://dbins2.speedgabia.com/jjansun/images/use_thumb2.jpg');"><a href="use2.html" onclick="gtag('event', '즉석당첨_룰렛');"><span>룰렛</span></a></li>
+							<li class='use3' style="background-image: url('https://dbins2.speedgabia.com/jjansun/images/use_thumb3.jpg');"><a href="use3.html" onclick="gtag('event', '즉석당첨_슬롯머신');"><span>슬롯머신</span></a></li>
+							<li class='use3' style="background-image: url('https://dbins2.speedgabia.com/jjansun/images/use_thumb4.jpg');"><a href="use4.html" onclick="gtag('event', '즉석당첨_카드뽑기');"><span>카드뽑기</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>
