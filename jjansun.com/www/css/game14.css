@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+
+/* 축구  */
+
+#game{position:relative; width:  100%; height: 100%;}
+
+#wrap #game #score{top: 20px;right: 20px;font-weight: bold;z-index: 10;text-align: center;}
+#wrap #game #score span{font-size:17px; color:#484848; display: block;}
+#wrap #game #score em{font-size: 27px; width:85px; padding:3px 0px; letter-spacing:2px; line-height:30px; border-radius:30px; text-shadow: -2px 0 #456c19, 0 2px #456c19, 2px 0 #456c19, 0 -2px #456c19; color:#e9fc47; background-color: #86d3de; display: block; }
+
+#wrap #game #timer{width: 40px;height: 40px;top: 30px;left: 20px;position:absolute;z-index: 5;border-radius: 50%;border: 3px solid #152c74;line-height: 40px;background-color: #fff;}
+#wrap #game #timer em{color:#152c75;font-size: 24px;font-weight: 800;text-align: center; display: block;width: 100%;height: 100%;box-sizing: border-box;}
+
+#wrap #game #bar{width: 40%;height: 22px;top: 39px;left:60px;background-color: #152c75;overflow: hidden;border: 3px solid #152c75;border-radius: 0 15px 15px 0;z-index: 4;}
+#wrap #game #bar span{display: block;width: 100%;height:100%;top:0px;left: 0%;background-color: #ffba25;overflow: hidden;position: absolute;}
+
+#wrap #game #goalkeeper{z-index:100;background-image: url(../images/game14/goalkeeper.png);width: 33%;height: 20%;background-repeat: no-repeat;background-size: contain;top: 37%;left: 33%;}
+#wrap #game #goalkeeper em{position:absolute; display:block; width:70%; height:99%; left:15%;}
+
+#wrap #game #ballArea{z-index:100; width: 93%;height: 52%;left: 3%;top: 35%;}
+#wrap #game #ballArea #ball{z-index:101;background-image: url(../images/game14/ball.png);width: 19%;height: 21%;background-repeat: no-repeat;background-size: contain;top: 77%;left: 41%;}
+#wrap #game #ballArea #gauge{width: 37%;height: 5%;left: 31%;top: 66%;border: 1px solid #ffffff; background-color: #000000;}
+#wrap #game #ballArea #gauge #position::after{content:"▲";font-size: 18px;color:#fff900; width:18px; top: -20px;left: 50%; margin-left:-9px; position: absolute;}
+#wrap #game #ballArea #gauge #position{position:absolute;width: 3%;height: 167%;left: 0%;top: -55%;background-color: #fff900;z-index: 2;} 
+#wrap #game #ballArea #gauge #position.start{animation-name: position_ani; -webkit-animation-name: position_ani; animation-duration: 0.9s; animation-delay: 0s; animation-iteration-count: infinite; animation-direction : alternate; animation-timing-function: linear;} 
+#wrap #game #ballArea #gauge #position.pause{animation-play-state: paused;}
+#wrap #game #ballArea #gauge #power{position:absolute;  width:0%; height:100%;  position: relative; z-index: 1;  }
+#wrap #game #ballArea #gauge #power.start{animation-name: power_ani; -webkit-animation-name: power_ani; animation-duration: 0.7s; animation-delay: 0s; animation-iteration-count: infinite; animation-direction : alternate; animation-timing-function: linear;} 
+#wrap #game #ballArea #gauge #power.pause{animation-play-state: paused;}
+
+#wrap #game #txt{top: 16%;left: 12%;width: 76%;height:9%;z-index: 102;}
+#wrap #game #txt span{background-size: contain;background-position: center;background-repeat: no-repeat;position: absolute;width: 80%; height:100%; top:0%;left: 10%;}
+#wrap #game #txt span.goal{background-image: url('../images/game14/game_txt_goal.png'); }
+#wrap #game #txt span.nogoal{background-image: url('../images/game14/game_txt_nogoal.png'); }
+
+
+@keyframes power_ani{
+  0% {width: 0%; background:rgb(3, 221, 185);}
+  34% {width: 34%; background:rgb(3, 221, 185);}
+  35% {width: 35%; background:rgb(0, 236, 79);}
+  50% {width: 50%; background:rgb(0, 236, 79);}
+  75% {width: 75%; background:rgb(0, 236, 79);}
+  76% {width: 76%; background:rgb(247, 0, 0);}
+  100% {width: 100%; background:rgb(247, 0, 0);}
+} 
+@keyframes position_ani{0% {left: 0%;} 100% {left: 97%;}} 
