@@ -8,7 +8,7 @@
 		header('Location: https://'.$_SERVER['HTTP_HOST'].'/'. $_SERVER[QUERY_STRING]);
 	}
 
-	if (!preg_match('/www/', $_SERVER['HTTP_HOST']) == true) {
+	if (!$_SERVER[SERVER_NAME]=='weespk.iptime.org' && !preg_match('/www/', $_SERVER['HTTP_HOST']) == true) {
 		header("location: https://www.".$_SERVER['HTTP_HOST'].$REQUEST_URI);
 	}
 

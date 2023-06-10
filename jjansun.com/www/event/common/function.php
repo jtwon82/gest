@@ -64,7 +64,7 @@
 			select chance_type2, count(1)cnt FROM tbl_chance a where ssn='$ssn' and chance_type ='use' and reg_dates = left(now(),10)
 			group by chance_type2
 		";
-		return array('game_list'=>db_select_list($sql_game), 'use_list'=>db_select_list($sql) );
+		return array('game_list'=>db_select_list($sql_game), 'use_list'=>db_select_list($sql_use) );
 	}
 
 	function getCoupangAdList(){

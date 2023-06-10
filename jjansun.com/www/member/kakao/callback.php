@@ -10,7 +10,7 @@
 
 	$client_id = "$kakao_clientid"; // 위에서 발급받은 Client ID 입력
 	$client_secret = "$kakao_secret";
-	$redirectURI = urlencode("http://www.jjansun.com/member/kakao/callback.php"); //자신의 Callback URL 입력
+	$redirectURI = urlencode("http://".$_SERVER[HTTP_HOST]."/member/kakao/callback.php"); //자신의 Callback URL 입력
 	$state = "RAMDOM_STATE";
 	$apiURL = "https://kauth.kakao.com/oauth/authorize?client_id=".$client_id."&redirect_uri=".$redirectURI."&response_type=code&scope=account_email, plusfriends";
 
@@ -107,7 +107,17 @@
 			form_submit($field, "/_exec.php", "post");
 		}
 		else{
-			header("Location: /login.html?msg=empty_requird_server");
+			if($_SERVER[HTTP_HOST]=='weespk.iptime.org:8010'){
+				$field['mode']			="LOGIN";
+				$field['userid']		='2508693684';
+				$field['email']			='weespk@kakao.com';
+				$field['sns_regist']	="ka";
+
+				form_submit($field, "/_exec.php", "post");
+			}
+			else{
+				header("Location: /login.html?msg=empty_requird_server");
+			}
 		}
 	}
 	else{

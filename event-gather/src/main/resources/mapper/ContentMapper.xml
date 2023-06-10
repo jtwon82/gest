@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="contentMapper">
+	<cache eviction="LRU" flushInterval="60000" size="512" readOnly="true"/>
+
+	<select id="selectNow" resultType="Map">
+		select now() now
+	</select>
+	
+	<select id="selectBoardReview" resultType="Map" useCache="false">
+		SELECT idx, etc1, etc2, etc3, etc4, etc5, etc6
+			FROM tbl_board WHERE b_id='012'
+	</select>
+	<update id="insertBoardReview" parameterType="Map">
+		INSERT INTO tbl_board_comment(b_idx, key_id, images, content, reg_date
+			, star_num, mall_name, images_origin, write_date)
+			VALUES(#{b_idx}, #{key_id}, #{images}, #{content}, now()
+			, #{star_num}, #{mall_name}, #{images_origin}, #{write_date})
+			ON DUPLICATE KEY UPDATE
+				update_date = now()
+				, images= VALUES(images)
+				, content = VALUES(content)
+	</update>
+	<update id="updateBoardReviewSucc" parameterType="Map">
+		update tbl_board
+			set update_date = now()
+				<if test="etc3!=null">,etc3='succ'</if>
+				<if test="etc6!=null">,etc6='succ'</if>
+			where idx=#{idx};
+	</update>
+	
+	
+	<select id="selectContentDom" resultType="Map" useCache="false">
+		SELECT idx, event_list_url, update_dates
+		FROM tbl_content_dom
+			WHERE state=1 
+			and update_dates <![CDATA[<]]> LEFT(now(),10) 
+			or update_dates is null
+	</select>
+	<select id="selectContentDomDetail" resultType="Map" useCache="false">
+		SELECT * FROM tbl_content_dom
+			WHERE idx = #{idx}
+	</select>
+	<update id="updateContentUpdateDates" parameterType="Map">
+		UPDATE tbl_content_dom SET update_date = now(), update_dates = LEFT(now(),10)
+			WHERE idx = #{idx}
+	</update>
+	<select id="selectContent" resultType="Map" useCache="true">
+		SELECT * FROM tbl_content
+	</select>
+
+	<select id="selectContentfromKey" parameterType="Map" resultType="Map">
+		SELECT idx
+		FROM tbl_content 
+		WHERE domain = #{domain} AND landing_uri = #{landing_uri}
+	</select>
+	<update id="insertContent" parameterType="Map">
+		INSERT INTO tbl_content(
+			dom_idx, userno, domain, landing_uri, landing
+			, title
+			, thumb_url, descript, gift_info
+			, sdate, edate
+			, collect_date)
+		VALUES(
+			#{dom_idx}, #{userno}, #{domain}, #{landing_uri}, #{landing}
+			, #{title}
+			, #{thumb_url}, #{descript}, #{gift_info}
+			, #{sdate}, #{edate}
+			, now()
+			)
+		ON DUPLICATE KEY UPDATE title = VALUES(title)
+			, dom_idx = VALUES(dom_idx)
+			, sdate = VALUES(sdate)
+			, edate = VALUES(edate)
+	</update>
+
+</mapper>

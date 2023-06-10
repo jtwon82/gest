@@ -878,27 +878,28 @@
 						E.AlertMsg('modal-alert','알림','종료 되었습니다.');
 					}
 					, start: function(req){
-						if (req.play_list.use_list)
-						{
-							var chk_next= true;
-							$(req.play_list.use_list).each(function(){
-								console.log( this, parseInt(this.cnt), E.loginType );
-								if (this.chance_type2==E.loginType)
-								{
-									if (parseInt(this.cnt)>0)
-									{
-										chk_next= false;
-									}
-								}
-							});
-							if (chk_next)
-							{
-								top.gameStart();
-							}
-							else {
-								E.AlertMsg('modal-alert','알림','오늘 이미 참여하셨습니다.');
-							}
-						}
+						top.gameStart();
+//						if (req.play_list.use_list)
+//						{
+//							var chk_next= true;
+//							$(req.play_list.use_list).each(function(){
+//								console.log( this, parseInt(this.cnt), E.loginType );
+//								if (this.chance_type2==E.loginType)
+//								{
+//									if (parseInt(this.cnt)>0)
+//									{
+//										chk_next= false;
+//									}
+//								}
+//							});
+//							if (chk_next)
+//							{
+//								top.gameStart();
+//							}
+//							else {
+//								E.AlertMsg('modal-alert','알림','오늘 이미 참여하셨습니다.');
+//							}
+//						}
 					}
 					, after: function(req){
 					}
