@@ -1,0 +1,21 @@
+insert into tbl_board (ip, reg_date, b_id, b_code, userno, notice, secret, name, title, link, content, etc1, etc2, etc3, etc4, etc5, etc6, etc7, etc8, etc9, ref) values ('89.238.167.198', '2019-04-10 19:19:54', '008', '', '', 'N', 'N', 'JamesTah', 'Please don’t miss this', '', 'My name is Pete and I want to share a proven system with you that makes me money while I sleep! This system allows you to TRY the whole thing for F R E E for a whole 30 days! That's right, you can finally change your future without giving up any sensitive information in advance! I signed up myself just a while ago and I'm already making a nice profit. 
+ 
+In short, this is probably the BEST THING THAT EVER HAPPENED TO YOU IF YOU TAKE ACTION NOW!!! 
+ 
+If you're interested in knowing more about this system, go to http://globalviralmarketing.com/?ref=qkgWOPkN5RoC1NWh and try it out. Again, it’s FREE! 
+ 
+You can thank me later 
+ 
+/Pete', '', '', '', '', '', '', '', '', '', '123')insert into tbl_board (ip, reg_date, b_id, b_code, userno, notice, secret, name, title, link, content, etc1, etc2, etc3, etc4, etc5, etc6, etc7, etc8, etc9, ref) values ('185.217.71.135', '2019-04-20 04:06:45', '008', '', '', 'N', 'N', 'Steveesods', 'Feedback and a proposal', '', 'Hi, 
+ 
+I've been visiting your website a few times and decided to give you some positive feedback because I find it very useful. Well done. 
+ 
+I was wondering if you as someone with experience of creating a useful website could help me out with my new site by giving some feedback about what I could improve? 
+ 
+You can find my site by searching for "casino gorilla" in Google (it's the gorilla themed online casino comparison). 
+ 
+I would appreciate if you could check it out quickly and tell me what you think. 
+ 
+casinogorilla.com 
+ 
+Thank you for help and I wish you a great week!', '', '', '', '', '', '', '', '', '', '123')

@@ -1,0 +1,54 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+<!-- 		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+	</head>
+	<body data-name="">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="event_invite">
+				<div class="wrap">
+					<a class="btn copy obj" href="javascript:;" onclick="gtag('event', '이벤트_친구초대_초대링크복사');">초대 링크 복사</a>
+					<input type="text" id="txt" value="https://www.jjansun.com/">
+					<script>
+						$(".copy.btn").click(function() {
+							if (ssn=='')
+							{
+								E.AlertMsg('modal-alert','알림','로그인 후 진행해 주세요.');
+
+							} else {
+								var urlbox = document.getElementById('txt');
+								urlbox.value= 'https://www.jjansun.com/gate_invite.php?ssn='+ssn;
+								urlbox.select();
+								document.execCommand('Copy');
+								urlbox.blur();
+								alert("링크가 복사되었습니다.\n친구한테 붙여넣기 해주세요.");
+							}
+						});
+					</script>
+					<a class="btn rank obj" href="/rank_invite.html" onclick="gtag('event', '이벤트_친구초대_초대랭킹');">초대 랭킹</a>
+					<img src="https://dbins2.speedgabia.com/jjansun/images/event_invite.jpg" alt="친구 초대 이벤트">
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>

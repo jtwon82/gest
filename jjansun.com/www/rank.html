@@ -1,0 +1,118 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+	</head>
+	<body data-name="5">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="rank">
+				<div class="wrap">
+					<h2><img src="images/rank_logo.png" alt="랭킹"></h2>
+					<div class="tabContainer">
+						<div class="tabHead">
+							<ul>
+								<li class="active" data-active='week'><a href="rank.html">주간 순위</a></li>
+								<li><a href="rank_all.html">전체 순위</a></li>
+								<li><a href="rank_invite.html">초대 순위</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="marquee_text" style="text-align: center; height:20px; margin:10px 0px; color:white;font-size: 12px;background-color: black; border-radius: 0px; overflow: hidden;">
+							6월 경품 확정 [현재 1주차 진행 중] 
+					</div>
+					<script>
+						// $('.marquee_text').marquee({
+						// 	direction: 'left',
+						// 	duration: 20000,
+						// 	gap: 0,
+						// 	delayBeforeStart: 2500,
+						// 	duplicated: true,
+						// 	startVisible: true
+						// });
+					</script>
+					<div class="rank detail">
+						<table class="my">
+							<colgroup>
+								<col width="15%">
+								<col width="60%">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="num">내 순위</th>
+									<th class="id">닉네임</th>
+									<th class="salt">누적 솔트</th>
+								</tr>
+							</thead>
+							<tbody class='my_rank'>
+								<tr>
+									<td class="num"></td>
+									<td class="id"></td>
+									<td class="salt"></td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<colgroup>
+								<col width="15%">
+								<col width="60%">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="num">순위</th>
+									<th class="id">닉네임</th>
+									<th class="salt">누적 솔트</th>
+								</tr>
+							</thead>
+							<tbody class='rankWeekList'>
+<!-- 								<tr> -->
+<!-- 									<td class="num">15</td> -->
+<!-- 									<td class="id">funny***</td> -->
+<!-- 									<td class="salt">80,000</td> -->
+<!-- 								</tr> -->
+							</tbody>
+						</table>
+						<ul class="numbering">
+<!-- 							<li><a href="javascript:;"><span class="hidden">&lt;</span></a></li> -->
+<!-- 							<li><a href="javascript:;" class="current">1</a></li> -->
+<!-- 							<li><a href="javascript:;">2</a></li> -->
+<!-- 							<li><a href="javascript:;">3</a></li> -->
+<!-- 							<li><a href="javascript:;">4</a></li> -->
+<!-- 							<li><a href="javascript:;">5</a></li> -->
+<!-- 							<li><a href="javascript:;"><span class="hidden">&gt;</span></a></li> -->
+						</ul>
+						<p class="update">UPDATE : 22.09.22 AM00:00</p>
+						<p class="notice">* 매주 <b>5명씩 경품</b>이 지급됩니다.(<b>월1회 제한, 카카오톡 아이디 기준</b>)</p>
+						<p class="notice">* 2주 이상 5위안에 들어도 1회만 지급(차순위 유저 경품확정)</p>
+						<p class="notice">* 주간경품 지급기준은 <b>최소 5,000솔트</b>입니다.</p>
+						<p class="notice">* <b>경품 지급</b>일은 일괄 <b>다음달 첫 수요일</b>입니다.</p>
+						<p class="notice">* 랭킹은 <b>게임으로 적립한 솔트</b>만 적용됩니다. (로그인, 추가적립 제외)</p>
+						<p class="notice">* 솔트 소진 여부 상관없이 <b>누적으로 적립된 솔트</b>로 반영합니다.</p>
+						<p class="notice">* 주간 순위는 매주 <b>월요일 0시에 초기화</b> 됩니다.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>

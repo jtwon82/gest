@@ -1,0 +1,286 @@
+﻿@charset "utf-8";
+
+/*common*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+body{background-color:#fff; height: 100%; font-size: 14px; font-weight: 400; color:#090909; font-family: 'Noto Sans KR', sans-serif; letter-spacing:0px; text-align: left; word-break: break-all; }
+html {height: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button, input { margin: 0;padding: 0}
+ul, ol, dl {list-style: none}
+ul {list-style: none; padding: 0; margin: 0}
+img, fieldset, iframe {border: 0}
+img {vertical-align:top}
+input, select, button {font-family: 'Noto Sans KR', sans-serif; vertical-align: middle;}
+input {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0;}
+textarea:focus, input:focus{outline: none;}
+textarea{font-family: 'Noto Sans KR', sans-serif; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+button, input{position: relative; border:none;}
+button{cursor:pointer; outline: none; border:none;}
+em, address {font-style: normal}
+a {text-decoration: none; color: inherit; display: block; position: relative;}
+.clear {clear: both;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0; }
+*{-webkit-tap-highlight-color:transparent}
+img.map, map area{outline: none;}
+
+img, canvas {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+img::-moz-selection { background-color: transparent; color: #000;}
+img::selection {background-color: transparent; color: #000;}
+.wid10{width:10%; height:auto;}.wid20{width:20%; height:auto;}.wid30{width:30%; height:auto;}.wid40{width:40%; height:auto;}.wid50{width:50%; height:auto;}
+.wid60{width:60%; height:auto;}.wid70{width:70%; height:auto;}.wid80{width:80%; height:auto;}.wid90{width:90%; height:auto;}.wid100{width:100%; height:auto;}
+.relative{position: relative;}
+.blind {font:0/0 a; height: 0; overflow: hidden; position: absolute; width: 0;}
+.pc{display: block;} 
+.mobile{display: none }
+.obj{position: absolute; z-index: 99;}
+.trs{-webkit-transition: all .4s ease-out; -moz-transition: all .4s ease-out; -ms-transition: all .4s ease-out; -o-transition: all .4s ease-out; transition: all .4s ease-out;}
+.tCenter{text-align: center;}
+.tLeft{text-align: left;}
+.tRight{text-align: right;}
+
+
+img{width:100%; height:auto;}
+#wrap{width:100%; min-width:320px;  max-width:640px; margin:0px auto; padding-top:80px; word-break: keep-all;}
+
+#gnb{width:100%; height:60px; border-bottom:1px solid #606060; background-color: rgba(66, 66, 66, 0.95); background-image: url('../images/gnb_line.png'); background-repeat: repeat-x; background-position-y: 100%; position: fixed; top:0px; left:0px; z-index: 10000; }
+#gnb.open{background-color: #f06629; border-bottom:none;}
+#gnb h1{width:95px; margin:0px auto;}
+#gnb h1 a{padding:12px 0px;}
+#gnb ul{top:60px; left:0px; width:100%; text-align: center; display:none; position: absolute; z-index: 1; background-color: #f06629; padding:20px 0px;}
+#gnb ul li a{color: #ffffff; font-size:20px; padding:2px; display: block; position: relative;}
+#gnb ul li.active a{font-size:21px; font-weight: 800;}
+#gnb ul li a img{width:25px; top:4px; left:50%; margin-left:-100px; position: absolute;}
+#gnb ul li.active a img{top:6px;}
+#gnbFade{position: fixed; width:100%; height:100%; top:0px; left:0px; background-image: url('../images/gnb_fade.png'); z-index: 9999; display: none;}
+#gnb button{position: absolute; top:0px; left:0px; margin:0em;border:none;background:none; z-index: 10;}
+#gnb button span{display:block;}
+#gnb .lines-button{padding:1rem;transition:.3s;cursor:pointer;user-select:none;}
+#gnb .lines-button:active{transition:0;}
+#gnb .lines{display:inline-block;width:2.5rem;height:0.17143rem;background:#ecf0f1;transition:0.3s;position:relative;}
+#gnb .lines:before,#gnb .lines:after{display:inline-block;width:2.5rem;height:0.17143rem;background:#ecf0f1;transition:0.3s;position:absolute;left:0;content:'';-webkit-transform-origin:0.28571rem center;transform-origin:0.28571rem center;}
+#gnb .lines:before{top:0.7rem;}
+#gnb .lines:after{top:-0.7rem;}
+#gnb .lines-button.x.close .lines{background:transparent;}
+#gnb .lines-button.x.close .lines:before,#gnb .lines-button.x.close .lines:after{-webkit-transform-origin:50% 50%;transform-origin:50% 50%;top:0;width:2.5rem;}
+#gnb .lines-button.x.close .lines:before{-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);}
+#gnb .lines-button.x.close .lines:after{-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);}
+
+#gnb #side {font-size:16px; position: absolute; top:0px; right:0px; color:#fff}
+#gnb #side a{padding:17px 10px; position: relative;}
+#gnb #side .login a{padding:16px 10px;}
+#gnb #side .login img{width:26px; margin-left:1px; vertical-align: -9px;}
+#gnb #side .my{display: none;}
+#gnb #side .my img{width:22px; margin-top:2px; margin-right:3px;}
+#gnb #side.login .my{display: block;}
+#gnb #side.login .login{display: none;}
+
+#footer{padding:10px 0px; color:#737373; background-color: #e8ebf0; text-align: center;}
+#footer p.top{padding:0px;}
+#footer p.top span{display: inline-block;}
+#footer p.top span a{padding:3px 5px; text-decoration: underline;}
+#footer p{padding:5px 0px; font-size:11px;}
+#footer p span{margin-right:5px;}
+#footer img{width:50px;}
+
+/* 개인정보취급방침 */
+#policy{padding:20px;}
+#policy h1{font-size:18px; margin-bottom:5px;}
+#policy dl{margin:20px 0px;}
+#policy dt{font-weight: 600;}
+#policy dd a{display: inline-block;}
+
+/* 메인 */
+#main .wrap{padding:10px;}
+#main .section{margin-bottom:40px;}
+#main h2{font-size:18px; margin-bottom:10px; text-align: center;}
+#main h2 img{width:25px; margin-top:2px; margin-right:5px;}
+#main h2 a{font-size:14px; margin-left:10px; font-weight: 600;  display: inline-block; text-decoration: underline;}
+
+#main h2 span{font-size:13px; display: block; font-weight: 300;}
+#main #banner{margin-bottom:50px;}
+#main #banner .swiperWrap{margin:0px 0px; margin-top:-20px; }
+#main .swiperWrap{margin:0px 20px; position: relative;}
+#main .swiperWrap .swiper-slide{border-radius: 10px; overflow: hidden; background-color: #d5d5d5;}
+#main .swiperWrap .swiper-slide em{padding:1px 0px; color:#fff; background-color: rgba(66, 66, 66, 0.8); position: absolute; width:100%; bottom:0px; left:0px; text-align: center; }
+#main .swiperWrap .swiper-button-next, #main .swiperWrap .swiper-button-prev{width:20px; background:none;}
+#main .swiperWrap .swiper-button-prev{top:55%; left:-25px;}
+#main .swiperWrap .swiper-button-next{top:55%; right:-25px;}
+#main .swiperWrap .swiper-pagination{width:100%; bottom:-20px; text-align: center;}
+#main .swiperWrap .swiper-pagination-bullet{width:8px; height:8px; margin:0px 2px; border-radius:50%; background:#f5c0a8; opacity:1;}
+#main .swiperWrap .swiper-pagination-bullet-active{background:#f06629; }
+#main #notice ul{padding:5px; background-color: #e5e5e5; border-radius: 5px;}
+#main #notice li a{font-size:12px; padding:2px 5px; font-weight: 300; overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+
+.numbering {text-align: center; margin:15px 0px; }
+.numbering li{margin:1px; display: inline-block; border:1px solid #e8e8e8; position: relative; background-color: #ffffff; }
+.numbering li a{padding:5px 8px; font-size:12px; line-height:12px; color:#4a4a4a;}
+.numbering li a.current{color:#ffffff; background-color: #4d4d4d;}
+
+
+/* 서브 */
+#sub{margin-top:-20px; padding-bottom:20px; min-height:420px;}
+#sub .wrap{padding:10px;}
+#sub h2{font-size:20px; margin:20px 0px; text-align: center;}
+#sub h2 span{font-size:13px; display: block; font-weight: 300;}
+
+/* 로그인 */
+#sub.login a.kakao{margin:40px 30px; line-height:60px; font-weight: 600; border-radius: 5px; background-color: #fee500; text-align: center;}
+#sub.login a.kakao span{padding-left:15px; position: relative;}
+#sub.login a.kakao span:before{width:30px; height:30px; top:-2px; left:-15px; background-image: url('../images/ico_kakao.png'); background-size: contain; background-repeat: no-repeat; background-position: center; content: ""; display: block; position: absolute;}
+#sub.login p.txt1{margin:0px 20px; margin-top:-10px; font-size:12px; color:#606060; text-align: center;}
+
+/* 마이페이지 */
+#sub.mypage .top{margin:30px 50px; color:#606060; }
+#sub.mypage .top .profileImg{width:60px; margin:0px auto; margin-bottom:10px; position: relative;}
+#sub.mypage .top .profileImg img{border-radius: 50%; overflow: hidden;}
+#sub.mypage .top .profileImg .input-file-button{width:22px; height:22px; bottom:0px; right:0px; background-image: url('../images/profile_modify.png'); background-repeat: no-repeat; background-size: contain; position: absolute; cursor:pointer;}
+#sub.mypage .top li{margin:3px 0px; padding-left:60px; position: relative;}
+#sub.mypage .top li:before{width:4px; height:4px; top:9px; left:0px; border-radius: 50%;background-color: #e9af32; content: ""; display: block; position: absolute;}
+#sub.mypage .top li span{padding-left:10px; position: absolute; top:0px; left:0px;}
+#sub.mypage .top li.nickName{position: relative; padding-right:35px;}
+#sub.mypage .top li.nickName input{font-size:14px; width:100%; height:22px; border:1px solid #000;}
+#sub.mypage .top li.nickName a{position: absolute; top:1px; right:0px; text-decoration: underline;}
+#sub.mypage .top li.nickName input{border-radius: 3px; padding:2px 5px; text-align: center;}
+#sub.mypage .top li.nickName input:read-only{border:1px solid #c3c2c2; color:#4a4a4a;}
+#sub.mypage .top .salt{margin-top:10px;}
+#sub.mypage .top .salt li{font-size:15px; padding-left:85px;}
+#sub.mypage .top .salt li:before{top:10px;}
+#sub.mypage .top .salt li.current:before{top:12px;}
+#sub.mypage .top .salt li b{padding-left:22px; font-weight: 400; position: relative;}
+#sub.mypage .top .salt li.current span{line-height:28px;}
+#sub.mypage .top .salt li.current b{font-size:18px; font-weight: 800; color:rgb(31, 60, 187); }
+#sub.mypage .top .salt li b::before{width:18px; height:18px; top:3px; left:0px; background-image: url('../images/ico_salt.png'); background-size: contain; background-repeat: no-repeat; background-position: center; content: ""; display: block; position: absolute;}
+#sub.mypage .top .salt li.current b::before{top:5px;}
+#sub.mypage .detail{margin:20px 0px; color:#606060; }
+#sub.mypage .detail p{font-size:16px; text-align: center;}
+#sub.mypage .detail p a{font-size:14px; margin-left:15px; font-weight: 600;  display: inline-block; text-decoration: underline;}
+#sub.mypage table{font-size:13px; letter-spacing: -1px; width:100%; border-bottom:1px solid #b2b2b2; margin:5px 0px; text-align: center; border-spacing:0; border-collapse:collapse; padding:0px; }
+#sub.mypage table th{padding:4px; color:#fff; font-weight: 400;}
+#sub.mypage table td{padding:3px; border-bottom:1px solid #e5e5e5;}
+#sub.mypage table thead tr{background-color: #333;;}
+
+/* 솔트적립 */
+#sub.accumulate h2 img{width:25px; margin-top:4px; margin-right:5px;}
+#sub.accumulate h2 span{font-size:13px; display: block; font-weight: 300;}
+#sub.accumulate .game ul{overflow: hidden;}
+#sub.accumulate .game li{float:left; width:48%; margin:1%; border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-position: center; overflow: hidden;}
+#sub.accumulate .game li a{height:80px; position: relative;}
+#sub.accumulate .game li a span{color:#ffffff; background-color: #000; display: block; width:100%; bottom:0%; left:0%; position: absolute; text-align: center;}
+#sub.accumulate .game li.complete a:before{content: ""; display: block; width:40px; height:32px; top:5px; left:3px; z-index: 2; background-image: url('../images/ico_complete.png'); background-size: contain; background-repeat: no-repeat; position: absolute;}
+
+/* 즉석당첨 */
+#sub.use h2 img{width:25px; margin-top:4px; margin-right:5px;}
+#sub.use h2 span{font-size:13px; display: block; font-weight: 300;}
+#sub.use .game ul{overflow: hidden;}
+#sub.use .game li{float:left; width:48%; margin:1%; border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-position: center; overflow: hidden;}
+#sub.use .game li a{height:80px; position: relative;}
+#sub.use .game li a span{color:#ffffff; background-color: #000; display: block; width:100%; bottom:0%; left:0%; position: absolute; text-align: center;}
+#sub.use .game li.complete a:before{content: ""; display: block; width:40px; height:32px; top:5px; left:3px; z-index: 2; background-image: url('../images/ico_complete.png'); background-size: contain; background-repeat: no-repeat; position: absolute;}
+
+/* 추가적립 */
+#sub.more h2 img{width:25px; margin-top:4px; margin-right:5px;}
+#sub.more h2 span{font-size:13px; display: block; font-weight: 300;}
+#sub.more .banner li{margin:15px 0px; }
+#sub.more .banner li p.title{margin-bottom:5px;}
+#sub.more .banner li p.title b{font-size:15px; color:#2e42a8;}
+#sub.more .banner li p.title img{width:18px; margin-right:2px; margin-top:3px;}
+#sub.more .banner li .box{height:80px; border:1px solid #000;}
+
+
+/* 랭킹 */
+#sub.rank{background-color: #2e42a8;}
+#sub.rank h2 img{width:70px;}
+#sub.rank .tabContainer{color:#ffffff; text-align: center;}
+#sub.rank .tabContainer .tabHead li{margin:0px 5px; border:1px solid #fff; border-radius: 20px; display: inline-block;}
+#sub.rank .tabContainer .tabHead li.active{color:#2e42a8; font-weight: 600; border:1px solid #9ef7fd; background-color: #9ef7fd;}
+#sub.rank .tabContainer .tabHead li a{line-height:25px; padding:0px 40px;}
+#sub.rank .rank{margin-top:15px; }
+#sub.rank .rank table{margin:10px 0px; font-size:12px; width:100%; border-bottom:1px solid #71afdb; text-align: center; border-spacing:0; border-collapse:collapse; padding:0px; }
+#sub.rank .rank table.my{background-color: #1f318b;}
+#sub.rank .rank table th{font-size:13px; padding:5px; color:#9ef7fd; font-weight: 500; border-bottom:1px solid #71afdb;}
+#sub.rank .rank table td{padding:4px; color:#ffffff; border-bottom:1px dashed #4d5eb5;}
+#sub.rank .rank table td.salt{color:#f6644c; font-weight: 600;}
+#sub.rank .rank p.update{font-size:11px; text-align: right; color:#ffffff;}
+
+/* 고객센터 */
+#sub.cs .tabContainer{text-align: center;}
+#sub.cs .tabContainer .tabHead{border-bottom:2px solid #f6644c;}
+#sub.cs .tabContainer .tabHead li{margin:0px; display: inline-block; background-color: #dfdede;}
+#sub.cs .tabContainer .tabHead li.active{color:#ffffff; font-weight: 600; background-color: #f6644c;}
+#sub.cs .tabContainer .tabHead li a{min-width:70px; line-height:25px; padding:0px 30px;}
+#sub.cs .tabContainer .tabHead li.active{text-decoration: underline;}
+#sub.cs .detail{margin:20px 0px; color:#606060; }
+#sub.cs .faq table{font-size:12px; width:100%; border-bottom:1px solid #b2b2b2; margin:10px 0px; text-align: center; border-spacing:0; border-collapse:collapse; padding:0px; }
+#sub.cs .faq table th{padding:5px 2px; color:#fff; font-weight: 400;}
+#sub.cs .faq table td{padding:5px 2px; border-bottom:1px solid #e5e5e5;}
+#sub.cs .faq table thead tr{background-color: #333;}
+#sub.cs .faq table tr.answer{display: none;}
+#sub.cs .faq table tr.answer td{font-size:13px; padding:10px; padding-top:5px; font-weight: 600; color:#f6644c;}
+#sub.cs .faq table tr.question.active td{padding-top:10px; font-weight: 600; color:#2e42a8; border-bottom:none;}
+
+
+
+
+
+
+
+/* 게임 인트로 */
+#gameWrap{position: relative; margin-top:-20px; text-align: center; overflow: hidden;}
+#intro{background-color: rgba(0, 0, 0, 0.85); width:100%; height:100%; position: absolute; left:0; top:0; z-index: 500;}
+#intro .wrap{max-width:500px; margin:0px auto;}
+#intro .content{padding-top: 80px;}
+#intro .content .start{width: 250px; margin:0px auto;}
+#intro .content .title{font-size: 40px; color:#fff;font-weight: 800; letter-spacing: 4px;}
+#intro .content .icon{width: 45px; margin:0 auto;margin-bottom: 5px;}
+#intro .content .txt{margin: 30px 20px; text-align: left;}
+#intro .content .txt p{font-size:14px; margin:2px 0px; letter-spacing: -1px; color:#fff;}
+#intro .content .txt b{font-weight: 600; color:#e9af32}
+#intro .content .test{font-size:18px; color:#fff; text-decoration: underline;}
+#intro .count{top: calc(50% - 100px); left: calc(50% - 100px); position: absolute;}
+#intro .count span{width:200px; display:none;}
+
+/* 실시간당첨자 */
+#wrap.game #winnerContainer{text-align: center; position: fixed; top:60px; left:0px; width:100%; color: #ffffff; background-color: #1f318b; padding:5px 0px; z-index: 9999;}
+#wrap.game #winner ul{width:100%;}
+#wrap.game #winner li{font-size:12px; font-weight: 600;}
+#wrap.game #winner li span{font-weight: 400;}
+
+/* 팝업 */
+.popup {display:none; position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;overflow: auto;z-index: 900;box-sizing: border-box;background-color:#0000008c;text-align: center; }
+.popup:before{content: ""; display: inline-block; height: 100%; vertical-align: middle; margin-right: -0.05em;}
+.popup .wrap {padding: 60px 0 40px; background-color:#fff; width:70%; margin:0 auto;vertical-align: middle;position: relative;z-index: 99999;box-sizing: border-box;display: inline-block;text-align: center;overflow: hidden;border-radius: 10px;}
+.popup .close{position: absolute;z-index: 2; cursor:pointer;right: 5%;top: 5%;width: 9%;height: 24px;}
+.popup .content{position: relative; color:#000; font-size:20px;}
+.popup button{font-size: 18px; background-color:#F6674C;width: 49%;height: 40px;line-height: 40px;text-align: center; font-weight:600;border-radius: 25px; color:#fff;margin-top: 30px;}
+.popup .reload{display: none;}
+#popup_score .content p{font-size:20px; font-weight:600;}
+#popup_score .content p em{color:#F6674C;}
+
+.popup.gift .wrap{padding:0; border-radius: 0; width:85%;}
+.popup.gift .wrap .giftImg{position: absolute;width: 80%;left: 10%;top: 8%;}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 1000px){
+    
+}
+
+
+
+
+
