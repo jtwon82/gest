@@ -135,7 +135,7 @@ img{width:100%; height:auto;}
 #main .swiperWrap{margin:0px 20px; position: relative;}
 #main .swiperWrap .swiper-slide{border-radius: 10px; overflow: hidden; background-color: #d5d5d5;}
 #main .swiperWrap .swiper-slide em{padding:1px 0px; color:#fff; background-color: rgba(66, 66, 66, 0.8); position: absolute; width:100%; bottom:0px; left:0px; text-align: center; }
-#main .swiperWrap .swiper-slide p.x2{animation: blink-effect 0.5s step-end 3; width:30px; height:30px; top:3px; left:3px; border-radius:8px; border:2px solid #747474; background-color:#ffffff; display:block; background-image:url('https://dbins2.speedgabia.com/jjansun/images/ico_x2.png'); background-size: contain; background-repeat:no-repeat; background-position:center; position: absolute;}
+#main .swiperWrap .swiper-slide p.x2{animation: blink-effect 0.5s step-end 3; width:30px; height:30px; top:3px; left:3px; border-radius:8px; border:1px solid #747474; background-color:#ffffff; display:block; background-image:url('https://dbins2.speedgabia.com/jjansun/images/ico_x2.png'); background-size: contain; background-repeat:no-repeat; background-position:center; position: absolute;}
 #main .swiperWrap .swiper-button-next, #main .swiperWrap .swiper-button-prev{width:20px; background:none;}
 #main .swiperWrap .swiper-button-prev{top:55%; left:-25px;}
 #main .swiperWrap .swiper-button-next{top:55%; right:-25px;}
@@ -239,8 +239,11 @@ img{width:100%; height:auto;}
 #sub.accumulate .game ul{overflow: hidden;}
 #sub.accumulate .game li{float:left; width:31.3%; margin:1%; border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-position: center; overflow: hidden;}
 #sub.accumulate .game li a{height:23vw; position: relative;}
+#sub.accumulate .game li a:after{content: ""; display: block; width:34px; height:17px; top:2px; right:2px; z-index: 2; background-size: contain; background-repeat: no-repeat; position: absolute;}
+#sub.accumulate .game li.new a:after{ background-image: url('https://dbins2.speedgabia.com/jjansun/images/ico_new.png'); }
+#sub.accumulate .game li.hit a:after{ background-image: url('https://dbins2.speedgabia.com/jjansun/images/ico_hit.png'); }
 #sub.accumulate .game li a span{color:#ffffff; background-color: #000; display: block; width:100%; bottom:0%; left:0%; position: absolute; text-align: center;}
-#sub.accumulate .game li.complete a:before{content: ""; display: block; width:60px; height:48px; top:12%; left:50%; margin-left:-30px; z-index: 2; background-image: url('https://dbins2.speedgabia.com/jjansun/images/ico_complete.png'); background-size: contain; background-repeat: no-repeat; position: absolute;}
+#sub.accumulate .game li.complete a:before{content: ""; display: block; width:60px; height:48px; top:12%; left:50%; margin-left:-30px; z-index: 3; background-image: url('https://dbins2.speedgabia.com/jjansun/images/ico_complete.png'); background-size: contain; background-repeat: no-repeat; position: absolute;}
 #sub.accumulate .game li a p.x2{ animation: blink-effect 0.5s step-end 3; width:26px; height:26px; top:3px; left:3px; border-radius:6px; border:1px solid #747474; background-color:#ffffff; display:block; background-image:url('https://dbins2.speedgabia.com/jjansun/images/ico_x2.png'); background-size: contain; background-repeat:no-repeat; background-position:center; position: absolute;}
 @keyframes blink-effect { 0% {opacity: 0;} 30% {opacity: 1;}}
 
@@ -269,7 +272,7 @@ img{width:100%; height:auto;}
 
 /* 랭킹 */
 #sub.rank{background-color: #2e42a8;}
-#sub.rank h2 img{width:60px;}
+#sub.rank h2 img{width:60px; margin:0px; margin-right:0px;}
 #sub.rank .tabContainer{color:#ffffff; text-align: center;}
 #sub.rank .tabContainer .tabHead li{margin:0px 3px; border:1px solid #fff; border-radius: 20px; display: inline-block; position: relative;}
 #sub.rank .tabContainer .tabHead li.active{color:#2e42a8; font-weight: 600; border:1px solid #9ef7fd; background-color: #9ef7fd;}
@@ -373,17 +376,34 @@ img{width:100%; height:auto;}
 
 /*친구초대 이벤트*/
 #sub.event_invite{padding-bottom:0px;}
-#sub.event_invite .wrap{padding:0px;}
+#sub.event_invite .wrap{padding:0px; background-color: #144ae0; color:#ffffff; padding-bottom:20px;}
 #sub.event_invite .wrap .btn{font-size:0px; width:50%; height:4%; left:25%;}
 #sub.event_invite .wrap .copy.btn{top:29.4%;}
 #sub.event_invite .wrap .rank.btn{top:33.9%;}
 #sub.event_invite .wrap #txt{position: absolute; top:0; left:0; width:1px; height:1px; margin:0; padding:0; border:0;}
+#sub.event_invite .winWrap{margin:10px 20px; margin-bottom:20px;}
+#sub.event_invite .winWrap .win{margin:10px 0px;}
+#sub.event_invite .winWrap .win p{font-size:16px; font-weight:600;}
+#sub.event_invite .winWrap .win p b{font-size:15px; margin:0px 3px; width:24px; height:24px; line-height:24px; border-radius: 12px; display: inline-block; background-color: #000000; text-align: center;}
+#sub.event_invite .winWrap .win ul{margin:10px 0px;}
+#sub.event_invite .winWrap .win li{font-size:13px;}
+#sub.event_invite .winWrap .win li span{margin-left:10px; font-weight: 600;}
+#sub.event_invite .winWrap .win .player{margin:10px 0px;}
+#sub.event_invite .winWrap p{font-size:13px;}
+#sub.event_invite table.invite{margin-top:5px; margin-bottom:20px; font-size:13px; letter-spacing: 0px; width:100%; border-bottom:1px solid #b2b2b2; text-align: center; border-spacing:0; border-collapse:collapse; padding:0px; }
+#sub.event_invite table.invite th{padding:4px; color:#000000; font-weight: 600;}
+#sub.event_invite table.invite td{padding:3px; border-bottom:1px solid #e5e5e5;}
+#sub.event_invite table.invite td b{color:#000000; font-size:14px; }
+#sub.event_invite table.invite thead tr{background-color: #ffffff;}
+
 
 #wrap.game #naverPay{text-align: center; margin-top:15px;}
 #wrap.game #naverPay .ico img{width:80px;}
 #wrap.game #naverPay p.current{font-size:18px; font-weight: 600; letter-spacing: 0px; color:#000000;}
 #wrap.game #naverPay p.end{font-size:18px; font-weight: 600; letter-spacing: 0px; color:#000000;}
 #wrap.game #naverPay p.current b{font-size:20px;}
+
+
 
 
 /*스토어*/

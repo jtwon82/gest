@@ -14,7 +14,7 @@ $(document).ready(function() {
 //			clickable : true,
 //		},
 //	});
-	var rndSlide1 = Math.round(Math.random()*11+1);
+	var rndSlide1 = Math.round(Math.random()*12+1);
 	var swiper1 = new Swiper("#section1 .swiper-container", {
 		slidesPerView : 2,
 		spaceBetween : 10,

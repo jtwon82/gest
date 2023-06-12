@@ -142,7 +142,7 @@
 							$page=$_GET['page'];
 
 							if(!$page) $page=1;
-							$list_num=200; $page_num=10;
+							$list_num=2000; $page_num=10;
 
 							$start_num=($page-1)*$list_num;
 

@@ -92,12 +92,6 @@ $(document).ready(function() {
 		onUpdate : function(n) {
 		}
 	});
-	function saltUp(num) {
-		$('#side em.salt').dynamicNumber('go', num);
-		setTimeout(() => {
-			$('#side em.salt').attr("data-from", num);
-		}, 1000);
-	}
 	
 	
 	

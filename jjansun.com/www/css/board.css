@@ -35,7 +35,7 @@
     display:block;
 }
 .replyNum{
-    background: url(../images/board/replyIcon.png) no-repeat;
+    background: url(https://dbins2.speedgabia.com/jjansun/images/board/replyIcon.png) no-repeat;
     width: 25px;
     padding-top: 20px;
     text-align: center;
@@ -99,7 +99,7 @@
     border-bottom:1px solid #d8d8d8;
 }
 .index_list .prev a, .index_list .next a{
-    background: url(../images/board/bu_arrow_t.png) no-repeat;
+    background: url(https://dbins2.speedgabia.com/jjansun/images/board/bu_arrow_t.png) no-repeat;
     font-size: 12px;
     padding: 10px 0;
     padding-left: 40px;
@@ -107,7 +107,7 @@
     background-size: 10px;
 }
 .index_list .next a{
-    background:url(../images/board/bu_arrow_d.png) no-repeat;
+    background:url(https://dbins2.speedgabia.com/jjansun/images/board/bu_arrow_d.png) no-repeat;
     background-position: 3% 50%;
     background-size: 10px;
 }
@@ -367,7 +367,7 @@
     width: 100%;
     padding: 15px 0;
     margin: 25px 0;
-    background: url(../images/board/bu_arrow_d.png) no-repeat center bottom;
+    background: url(https://dbins2.speedgabia.com/jjansun/images/board/bu_arrow_d.png) no-repeat center bottom;
     font-size: 20px;
     text-align:center;
     color: #636363;
@@ -378,7 +378,7 @@
     width:100%;
 }
 .ingEventTitle, .commingEventTitle{
-    background:url(../images/board/measuretBg.png) no-repeat;
+    background:url(https://dbins2.speedgabia.com/jjansun/images/board/measuretBg.png) no-repeat;
     width:158px;
     height:67px;
     line-height:47px;

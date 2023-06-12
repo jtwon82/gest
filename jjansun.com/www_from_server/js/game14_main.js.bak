@@ -3,7 +3,18 @@ $(document).ready(function() {
 	//게임 스타트
 	$("#intro .start").click(function(){
 		//alert("이미 참여하였습니다. \n내일 다시 도전하세요!");
-		gameStart();
+		//gameStart();
+		E.RegisterChk({ 'empty':'empty'
+			, loginType:'game14'
+			, beforeLogin: function(req){
+				E.AlertMsg('modal-alert', '알림', '로그인 후 이용 가능합니다.' );
+			}
+			, callback: function(req){
+				$("#main .select_wrap").hide();
+				JS.member_info= req.info;
+				JS.loginCallback(req);
+			}
+		});
 	});
 
 	//연습하기
@@ -15,11 +26,49 @@ $(document).ready(function() {
 	
 	//결과
 	function result(score){
+		window.score= score;
 		console.log("점수="+score);
 		if(!practice){
 			//실제(솔트 지급)
 			$("#popup_score em").text(score);
 			$("#popup_score").fadeIn();
+			
+			JS.RESULT({ 'empty':'empty'
+				, thumb:'thumb_game14.jpg'
+				, user_type:'game14', user_type2:score
+				, loseAfter: function(req){
+					console.log( 'lose' );
+				}
+				, winAfter: function(req){
+
+					E.ChargeChance({'empty':'empty'
+						, chance_type:'add'
+						, chance_type2:'game14'
+						, user_type: score
+						, callback:function(req){
+							if(req.chance_info){
+								//$(".my em:eq(1)").html(parseInt(req.chance_info.chance_cnt).toLocaleString());
+								saltUp(Number($('#side em.salt').attr("data-from"))+ (score*req.saltboom));
+							}
+							if (req.result=='o')
+							{
+								if (req.saltboom>1)
+								{
+									//E.AlertMsg('modal-alert','알림',req.saltboom+'배 정립되었습니다.');
+									$("#popup_score em").text((score*req.saltboom));
+								}
+								else{
+									$("#popup_score em").text(score);
+								}
+								$("#popup_score").fadeIn();
+							}
+							else{
+								E.AlertMsg('modal-alert','알림','이미 참여 하셨습니다.');
+							}
+						}
+					});
+				}
+			});
 		}else{
 			//연습
 			$("#popup_score p").text("연습이 완료되었습니다.");
@@ -83,7 +132,7 @@ $(document).ready(function() {
 	var timeInterval;
 	var time1 = new TimelineLite();
 	
-	function gameStart(){
+	gameStart= function (){
 		countdown();
 	}
 
