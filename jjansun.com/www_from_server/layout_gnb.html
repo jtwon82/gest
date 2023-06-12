@@ -1,0 +1,42 @@
+<div id="gnb">
+	<h1><a href="index.html"><img src="https://dbins2.speedgabia.com/jjansun/images/logo.png" alt="짠순이게임방"></a></h1>
+	<a href="/rank.html" class="goRank" onclick="gtag('event', 'GNB_랭킹아이콘');"><img src="https://dbins2.speedgabia.com/jjansun/images/rank_logo2.png" alt="랭킹"></a>
+	<div id="side" class="<?if($_SESSION[USER][LOGIN_ID]!='')echo'login';?>"><!-- 로그인시 login 클래스추가 -->
+		<?
+			if($_SESSION[USER][LOGIN_ID]!=""){
+		?>
+		<?
+			} else {
+		?>
+				<div class="login"><a href="login.html" onclick="gtag('event', 'GNB_로그인');">로그인<img src="https://dbins2.speedgabia.com/jjansun/images/ico_kakao.png" alt="로그인"></a></div>
+		<?
+			}
+		?>
+		<div class="my"><a href="mypage.html" onclick="gtag('event', 'GNB_마이페이지(우측)');"><span class="level level<?=$_SESSION[USER][LOGIN_TYPE]?>"><em><?=$_SESSION[USER][LOGIN_TYPE]?></em></span><img src="https://dbins2.speedgabia.com/jjansun/images/ico_salt.png"><em class="salt" data-from="<?=$_COOKIE[chance_cnt]?>" data-decimals="0" data-format="group"><?=number_format($_COOKIE[chance_cnt])?></em></a></div>
+	</div>
+	<button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
+	<nav>
+		<ul>
+			<li class="menu_mypage"><a href="mypage.html" onclick="gtag('event', 'GNB_마이페이지');">마이페이지</a></li>
+			<li class="menu_accumulate"><a href="salt_accumulate.html" onclick="gtag('event', 'GNB_솔트적립');">솔트 적립</a></li>
+			<li class="menu_use"><a href="salt_use.html" onclick="gtag('event', 'GNB_즉석당첨');">즉석 당첨</a></li>
+			<li class="menu_more"><a href="more.html" onclick="gtag('event', 'GNB_추가적립');">추가 적립</a></li>
+			<li class="menu_rank"><a href="rank.html" onclick="gtag('event', 'GNB_랭킹');">랭킹</a></li>
+			<li class="menu_cs"><a href="cs_board_list.html" onclick="gtag('event', 'GNB_고객센터');">고객센터</a></li>
+			<?
+				if($_SESSION[USER][LOGIN_ID]!=""){
+			?>
+			<li class="menu_logout"><a href="/member/logout.php">로그아웃</a></li>
+			<?
+				}
+			?>
+		</ul>
+	</nav>
+</div>
+
+<div id="gnbFade"></div>
+<script type="text/javascript">
+<!--
+	
+//-->
+</script>

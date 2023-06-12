@@ -1,0 +1,129 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<script>kakaokey= '772ba33511e2f379bf5cae90fdaf3efe';</script>
+		<?php include("layout_head.html"); ?>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+<!-- 		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.id='';
+			$(document).ready(function(){
+				setTimeout(function(){
+					$.ajax({
+						type: 'POST',
+						url: '/member/kakao/loginchk.php',
+						data: { 'mode' : '' },
+						dataType:"json",
+						success: function(req) {
+							console.log( req );
+							if (req.uInfo.id)
+							{
+								window.id= (req.uInfo.id);
+								Kakao.Auth.setAccessToken(req.uInfo.access_token);
+							}
+						}
+					});
+				},500);
+
+				$(".addchannel").click(function(){
+					if (window.id )
+					{
+						Kakao.API.request({
+							url: '/v1/api/talk/channels',
+							success: function(response_channel) {
+								if (response_channel.channels[0].relation=='ADDED')
+								{
+									alert("채널이 이미 추가됐습니다. 레벨업 신청해주세요.");
+								}
+								else{
+									Kakao.Channel.addChannel({channelPublicId: '_Eywixj'});
+								}
+							},
+							fail: function(error) {
+								console.log(error);
+							}
+						});
+					}
+					else {
+						alert("로그인후 이용가능합니다.");
+					}
+				});
+
+				$(".golevelup").click(function(){
+					if (window.id)
+					{
+						Kakao.API.request({
+							url: '/v1/api/talk/channels',
+							success: function(response_channel) {
+								if (response_channel.channels[0].relation=='ADDED')
+								{
+									$.ajax({
+										type: 'POST',
+										url: '_exec.php',
+										data: { 'mode' : 'COUPON_REGIST', 'action_type':'KAKAOTALK_SUBDATA', 'subdata':$('.subdata').val() },
+										dataType:"json",
+										success: function(req) {
+											console.log( req );
+											if (req.member_typehistory.cnt>1)
+											{
+												alert("레벨업 신청은 1인 1회만 가능합니다.");
+											}
+											else{
+												alert("축하합니다. 레벨이 1단계 업그레이드 되었습니다.");
+												location.reload();
+											}
+										}
+									});
+								}
+								else {
+									alert("채널추가후 이용가능");
+								}
+							},
+							fail: function(error) {
+								console.log(error);
+							}
+						});
+					}
+					else {
+						alert("로그인후 이용가능합니다.");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body data-name="4">
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="more coupon">
+				<div class="wrap">
+					<div class="">
+						<p>1. 짠순이 카톡채널에서 "레벨업 쿠폰발급"버튼으로 쿠폰을 발급받아요.</p>
+						<p>2. 쿠폰을 짠순이 사이트에 등록해주세요.</p>
+						<p>Level UP ! 레벨별로 차등 지급되는, 로그인 기본솔트로 당첨 기회도 올려보세요.</p>
+					</div>
+					<br>
+					<div class="banner">
+						<a href="javascript:;" onclick="Kakao.Channel.chat({channelPublicId: '_Eywixj',});">Step1. 카카오톡 채널로가기</a>
+						<input type='text' name='subdata' class='subdata'>
+						<a href="javascript:;" class="golevelup">Step2. 쿠폰등록하기</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>

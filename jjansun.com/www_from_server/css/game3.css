@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+
+/*카드맞추기*/
+#game .state{width:80%; height:12%; top:5%; left:10%;}
+#game .state .time{ text-align: center;}
+#game .state .txt{font-size:22px; line-height:36px; color:#000000; font-weight:700; width:80%; height:100%; top:0px; left:10%;}
+#game .state .txt em{font-size:40px; display: block;}
+
+#game .cardContainer{width:88%; height:62%; top:20%;left:6%;}
+#game .cardContainer .card{width:22.27%; height:23.5%; border-radius:10px; overflow:hidden; position: absolute; cursor:pointer;}
+#game .cardContainer .card.card0{top:2%; left:2%;}
+#game .cardContainer .card.card1{top:2%; left:26%;}
+#game .cardContainer .card.card2{top:2%; left:50.5%;}
+#game .cardContainer .card.card3{top:2%; left:75%;}
+#game .cardContainer .card.card4{top:26.3%; left:2%;}
+#game .cardContainer .card.card5{top:26.3%; left:26%;}
+#game .cardContainer .card.card6{top:26.3%; left:50.5%;}
+#game .cardContainer .card.card7{top:26.3%; left:75%;}
+#game .cardContainer .card.card8{top:50.5%; left:2%;}
+#game .cardContainer .card.card9{top:50.5%; left:26%;}
+#game .cardContainer .card.card10{top:50.5%; left:50.5%;}
+#game .cardContainer .card.card11{top:50.5%; left:75%;}
+#game .cardContainer .card.card12{top:75%; left:2%;}
+#game .cardContainer .card.card13{top:75%; left:26%;}
+#game .cardContainer .card.card14{top:75%; left:50.5%;}
+#game .cardContainer .card.card15{top:75%; left:75%;}
+#game .cardContainer .card span.a{width:100%; height:100%; position: absolute; top:0px; left:0px; z-index: 2;}
+#game .cardContainer .card span.b{width:100%; height:100%; position: absolute; top:0px; left:0px; z-index: 1;}
+
+#pause, #resume{display: none;}

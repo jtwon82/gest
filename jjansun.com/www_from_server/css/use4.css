@@ -1,0 +1,26 @@
+﻿@charset "utf-8";
+#game{ margin:0px auto; position: relative;}
+#game .wrap {} 
+#game .wrap .cardList{ width: 100%; height: 60%; top:27%;}
+#game .wrap li{cursor: pointer;width:28%;z-index: 100;height:42%; box-shadow: 0px 0px 6px #6800da; transform-style: preserve-3d;transition: transform 0.8s cubic-bezier(0.18, 0.89, 1, 1);}
+#game .wrap li.click{top:-4%; }
+#game .wrap li span{display: block; position:absolute; left:0; top:0; width:100%; height:100%; background-size: contain;background-repeat: no-repeat;}
+#game .wrap li .front{background-image: url(../images/use4/card.png);}
+#game .wrap li .back{background-image: url(../images/use4/card2.png); display:none; transform: rotateY(180deg);}
+#game .wrap li.card1{left:0%;}
+#game .wrap li.card2{left:8%; z-index: 101;}
+#game .wrap li.card3{left:16%; z-index: 102;}
+#game .wrap li.card4{left:24%; z-index: 103;}
+#game .wrap li.card5{left:32%; z-index: 104;}
+#game .wrap li.card6{left:40%; z-index: 105;}
+#game .wrap li.card7{left:48%; z-index: 106;}
+#game .wrap li.card8{left:56%; z-index: 107;}
+#game .wrap li.card9{left:64%; z-index: 108;}
+#game .wrap li.card10{left:72%; z-index: 109;}
+#game .wrap li span em{width: 72%;height: 72%;position: absolute;left: 14%;top: 14%;}
+#game .wrap .txt{display:none; top:55%;color: #ffffffe6;font-size: 17px;left: calc(50% - 88.5px);}
+#game .wrap .select{display:none; cursor: pointer; color: #0e003b; width: 124px; height: 45px; line-height: 45px; bottom: 36%; left: calc(50% - 62px); font-size: 21px;  background-color: #Fff; border-radius: 23px; font-weight: 600;}
+#game .wrap .card.spin{transform: rotateY(-180deg); }
+
+#popup_gift .btn{font-size: 16px;background-color:#F6674C;width: 42%;height: 35px;line-height: 35px;text-align: center;font-weight:600;border-radius: 25px;color:#fff;bottom: 7%;left: calc(50% - 64px);}
+#popup_gift .retry{display:none; bottom:11%;}

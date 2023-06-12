@@ -1,0 +1,10 @@
+﻿@charset "utf-8";
+
+#game .obj{position: absolute;}
+#game .board_start{width: 88px;height: 88px;top: 105px;left: 106px;z-index: 5;}
+#game .board_on{width: 300px;height: 300px;top: 0;left: 0;z-index: 3;background-image: url('../images/use2/roulette_board_on.png');background-size: cover;}
+#game .board_arrow{width: 40px;height: 70px;top: -33px;left: 130px;z-index: 5;}
+#game .boardWrap{position: absolute;top: 36%;left: calc(50% - 150px);}
+
+#popup_gift .btn{font-size: 16px;background-color:#F6674C;width: 42%;height: 35px;line-height: 35px;text-align: center;font-weight:600;border-radius: 25px;color:#fff;bottom: 7%;left: calc(50% - 64px);}
+#popup_gift .retry{display:none; bottom:11%;}

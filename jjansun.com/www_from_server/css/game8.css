@@ -1,0 +1,85 @@
+﻿@charset "utf-8";
+
+/* 손타자 */
+#intro .content .icon{width:50px;}
+
+#game #score{font-size: 20px;color:#000;font-weight: 600;top: 2%;left: 5%;width: 25%;text-align: left;z-index: 10;}
+#game #score em{font-size:30px;margin-left:10px;color: #F9595F;vertical-align: -3px;}
+
+#game #life{width: 40%;height: 4%;right: 5%;top: 4%;text-align:right;}
+#game #life span{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/game_life.png);width: 17%;height: 100%;display: inline-block;background-size: contain;position: relative;background-repeat: no-repeat;}
+#game #life span.empty{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/game_life2.png);}
+
+#game #computer{width:100%;top: 10%;height: 18.1%;}
+#game #computer .hand{opacity:0; transition:all .2s;margin: 0 auto;cursor: pointer;height: 100%;}
+#game #computer .hand{ background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/gif.gif);}
+#game #computer .rock{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/rock.png);}
+#game #computer .scissor{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/scissor.png);}
+#game #computer .paper{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/paper.png);}
+#game #computer .noselect{background-image:none;}
+
+#game #user .hand{opacity:0; background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/user_gif.gif);}
+#game #user{width:100%;bottom: 18%;height: 30%;}
+#game #user em{cursor: pointer;font-style:normal;color: #fff;border: 5px solid #fff;font-size: 19px;font-weight:600;border-radius: 50%;width: 65px;height: 65px;display: inline-block;line-height: 65px;margin: 0 10px;}
+#game #user em.select{border: 5px solid #ff0000;}
+#game #user .hand{transition:all .2s;cursor: pointer;margin: 0 auto;margin-bottom: 3%;}
+#game #user .rock{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/user_rock.png);}
+#game #user .scissor{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/user_scissor.png);}
+#game #user .paper{background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/user_paper.png);}
+#game #user .noselect{background-image:none;}
+
+#game .turn{display:none; background-image:url(https://dbins2.speedgabia.com/jjansun/images/game8/turn.png);background-size: contain;background-repeat: no-repeat;width: 35px;height: 35px;left: 18%;}
+#game #comTurn{top: 35%;}
+#game #userTurn{bottom: 60%;}
+
+#wrap #game #txt{top: 36.5%;left:0%;width:100%;height:9%;z-index: 999;display:none;}
+#wrap #game #txt span{background-size: contain;background-position: center;background-repeat: no-repeat;position: absolute;width: 80%;height:100%;top:0%;left: 10%;}
+#wrap #game #txt span.win{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/game_win.png'); }
+#wrap #game #txt span.lose{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/game_lose.png'); }
+#wrap #game #txt span.noselect{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/game_noselect.png'); }
+#wrap #game #txt span.again{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/game_again.png'); }
+
+#wrap #game .nextRound{display: none;top: 38%;left: calc(50% - 75px);font-size: 30px;font-weight: 600;background-color: #000;color: #fff;padding: 0 10px;}
+
+#game .notice{display:none; top: 46%;left: calc(50% - 113.5px);font-size: 16px;}
+#game #user .type.rock{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/btn1.png'); background-size: contain; background-repeat: no-repeat;}
+#game #user .type.scissor{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/btn2.png'); background-size: contain; background-repeat: no-repeat;}
+#game #user .type.paper{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/btn3.png'); background-size: contain; background-repeat: no-repeat;}
+#game .hand{width: 39%;height: 61%;background-size: contain;background-repeat:no-repeat;display:block;background-position: center center;}
+
+#game #sec{display: none;font-size: 30px;top: 31%;left: 41%;font-weight: 600;color: #fff;width: 60px;height: 60px;background: red;border-radius: 50%;line-height: 60px;}
+
+#game #computer .hand.shake{-webkit-animation: comShake cubic-bezier(0.455, 0.030, 0.515, 0.955) 3 both; animation: comShake .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) 3 both; }       
+#game #user .hand.shake{-webkit-animation: userShake cubic-bezier(0.455, 0.030, 0.515, 0.955) 3 both; animation: userShake .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) 3 both; }       
+@-webkit-keyframes userShake{
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50%{
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+@-webkit-keyframes comShake{
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50%{
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+#game #character{position: absolute; bottom:0px; left:0px; width:100%; height:12%; background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/user_default.png'); background-repeat: no-repeat; background-size: contain; background-position: center;}
+#game #character.win{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/user_win.png'); }
+#game #character.lose{background-image: url('https://dbins2.speedgabia.com/jjansun/images/game8/user_lose.png'); }
+
+
+
+
+
+

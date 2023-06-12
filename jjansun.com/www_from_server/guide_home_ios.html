@@ -1,0 +1,44 @@
+<?php include("include_top.php"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?php include("layout_head.html"); ?>
+		<link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+<!-- 		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/CSSPlugin.min.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/EasePack.min.js" type="text/javascript"></script>
+		<script src="js/gnb.js?st=<?=rand()?>" type="text/javascript"></script>
+	</head>
+	<body data-name="">
+		<style>
+			.wrap{width:80%; margin:0px auto; margin-top:20px; text-align: center;}
+			.wrap h3{font-size:17px;}
+			.wrap p{margin:20px 0px; font-size:25px; font-weight: 600;}
+			.wrap p img{width:75%; margin:0px auto; border:2px solid #000000; display: block;}
+		</style>
+		<div id="wrap">
+
+			<!-- gnb s-->
+			<?php include("layout_gnb.html"); ?>
+			<!-- gnb e-->
+
+			<div id="sub" class="">
+				<div class="wrap">
+					<h3>IOS(사파리) 홈 화면 추가 방법</h3>
+					<p>①<img src="https://dbins2.speedgabia.com/jjansun/images/guide_safari_1.jpg" alt="짠순이 IOS 홈화면 추가" /></p>
+					<p>②<img src="https://dbins2.speedgabia.com/jjansun/images/guide_safari_2.jpg" alt="짠순이 IOS 홈화면 추가" /></p>
+					<p>③<img src="https://dbins2.speedgabia.com/jjansun/images/guide_safari_3.jpg" alt="짠순이 IOS 홈화면 추가" /></p>
+					<p>④<img src="https://dbins2.speedgabia.com/jjansun/images/guide_safari_4.jpg" alt="짠순이 IOS 홈화면 추가" /></p>
+				</div>
+			</div>
+
+			<!-- footer s-->
+			<?php include("layout_footer.html"); ?>
+			<!-- footer e-->
+
+		</div>
+	</body>
+</html>
